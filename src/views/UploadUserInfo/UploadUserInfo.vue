@@ -8,9 +8,12 @@
             信息
           </b-col>
           <b-col cols="6" sm="9" xs="9" md="9" lg="9" xl="7">
-            <b-form-group style="text-align:left" name="radio-inline">
-              <b-form-radio v-model="selected" name="radio-options-slots" value="geren">个人</b-form-radio>
-              <b-form-radio v-model="selected" name="radio-options-slots" value="qiye">企业</b-form-radio>
+            <b-form-group name="radio-inline" style="text-align:left">
+              <b-form-radio-group
+                v-model="selected"
+                :options="options"
+                name="radio-inline"
+              ></b-form-radio-group>
             </b-form-group>
           </b-col>
         </b-row>
@@ -107,7 +110,11 @@
 export default {
   data(){
     return{
-      selected: "geren",
+      selected: 0,
+      options: [
+        { text: "个人", value: 0 },
+        { text: "企业", value: 1 },
+      ],
       name:"",
       sexSelected:0,
       sexOptions: [

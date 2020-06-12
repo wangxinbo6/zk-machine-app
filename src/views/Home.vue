@@ -9,20 +9,21 @@
         indicators
         background="#ababab"
         img-width="1024"
-        img-height="120"
+        img-height="300"
         style="text-shadow: 1px 1px 2px #333;"
         @sliding-start="onSlideStart"
         @sliding-end="onSlideEnd"
       >
         <!-- Text slides with image -->
         <b-carousel-slide
+          style="max-height:50vh"
           caption="First slide"
           text="Nulla vitae elit libero, a pharetra augue mollis interdum."
           img-src="https://picsum.photos/1024/480/?image=52"
         ></b-carousel-slide>
 
         <!-- Slides with image only -->
-        <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=58"></b-carousel-slide>
+        <b-carousel-slide style="max-height:50vh" img-src="https://picsum.photos/1024/480/?image=52"></b-carousel-slide>
 
       </b-carousel>
 
@@ -33,8 +34,23 @@
       </div>
       <b-container fluid>
         <b-row style="padding:12px" >
-          <b-col class="card" gutter cols="6" sm="6" xs="6" md="4" lg="3" xl="3" v-for="(item,index) in shopList" :key="index" style="margin-bottom:6px">
-            <div class="tl">
+          <b-col  gutter cols="6" sm="6" xs="6" md="4" lg="3" xl="2" v-for="(item,index) in shopList" :key="index">
+            <div class="tl card" style="margin-bottom:6px">
+              <b-img :src="item.url" fluid="6" alt="Responsive image"></b-img>
+              <p style="text-align:center">{{item.title}}</p>
+              <p>库存：{{item.num}} 台</p>
+              <p>售价：￥{{item.money}}</p>
+            </div>
+          </b-col>
+        </b-row>
+      </b-container>
+      <div class="title">
+        饮料机
+      </div>
+      <b-container fluid>
+        <b-row style="padding:12px" >
+          <b-col  gutter cols="6" sm="6" xs="6" md="4" lg="3" xl="2" v-for="(item,index) in shopList2" :key="index">
+            <div class="tl card" style="margin-bottom:6px">
               <b-img :src="item.url" fluid="6" alt="Responsive image"></b-img>
               <p style="text-align:center">{{item.title}}</p>
               <p>库存：{{item.num}}</p>
@@ -62,6 +78,15 @@ export default {
         {url:"http://img2.imgtn.bdimg.com/it/u=111399773,3729640683&fm=26&gp=0.jpg",title:"葡萄机",num:"10",money:96},
         {url:"http://img2.imgtn.bdimg.com/it/u=111399773,3729640683&fm=26&gp=0.jpg",title:"葡萄机",num:"10",money:96},
         {url:"http://img2.imgtn.bdimg.com/it/u=111399773,3729640683&fm=26&gp=0.jpg",title:"葡萄机",num:"10",money:96},
+        {url:"http://img2.imgtn.bdimg.com/it/u=111399773,3729640683&fm=26&gp=0.jpg",title:"葡萄机",num:"10",money:96},
+        {url:"http://img2.imgtn.bdimg.com/it/u=111399773,3729640683&fm=26&gp=0.jpg",title:"葡萄机",num:"10",money:96}
+      ],
+      shopList2:[
+        {url:"http://img2.imgtn.bdimg.com/it/u=111399773,3729640683&fm=26&gp=0.jpg",title:"西瓜机",num:"999",money:8700},
+        {url:"http://img2.imgtn.bdimg.com/it/u=111399773,3729640683&fm=26&gp=0.jpg",title:"葡萄机",num:"10",money:96},
+        {url:"http://img2.imgtn.bdimg.com/it/u=111399773,3729640683&fm=26&gp=0.jpg",title:"葡萄机",num:"10",money:96},
+        {url:"http://img2.imgtn.bdimg.com/it/u=111399773,3729640683&fm=26&gp=0.jpg",title:"葡萄机",num:"10",money:96},
+        {url:"http://img2.imgtn.bdimg.com/it/u=111399773,3729640683&fm=26&gp=0.jpg",title:"葡萄机",num:"10",money:96},
         {url:"http://img2.imgtn.bdimg.com/it/u=111399773,3729640683&fm=26&gp=0.jpg",title:"葡萄机",num:"10",money:96}
       ]
     }
@@ -82,9 +107,17 @@ export default {
 
 <style lang="scss" scoped>
   .title{
-    width: 94%;
+    width: 100%;
     margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 10px 0;
     text-align: left;
     border-bottom: 2px solid rgba(128, 128, 128, 0.39);
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .card>p{
+    padding:4px 10px;
   }
 </style>

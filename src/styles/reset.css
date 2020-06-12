@@ -1,4 +1,4 @@
-@charset "utf-8";
+/* @charset "utf-8";
 /* 初始化 */
 body, ul, ol, li, p, dl, dt, dd, input, form, h1, h2, h3, h4, h5, h6 , a {
 	margin: 0;
@@ -79,66 +79,3 @@ input:focus {
 	margin: 18px 0!important;
 }
 em{font-style:normal}
-
-/*单选钮*/
-.el-radio-button{
-  margin-bottom: 10px;
-}
-.el-radio-button__inner{
-  border: none!important;
-}
-.el-radio-button:first-child .el-radio-button__inner{
-  border-left: none!important;
-}
-
-.headers{
-  background-image: none!important;
-}
-.el-menu--horizontal>.el-submenu.is-active .el-submenu__title{
-  border-bottom: none!important;
-}
-
-.el-message{
-  top: 20px!important;
-}
-.el-backtop{
-  z-index: 9999!important;
-}
-@media only screen and (max-width:767px){
-  .el-message{
-    top: 10px!important;
-    min-width: 96%!important;
-  }
-}
-.el-notification{
-  bottom: 16px!important;
-}
-
-.buttonSwitch i{
-  color: #fff!important;
-}
-
-.repeatList .el-drawer__body{
-  overflow-y: auto;
-}
-
-.repeatList .el-drawer.btt{
-  height: 60%!important;
-  z-index: 99999;
-}
-@media only screen and (max-width:767px){ /* 职位选择手机端位置 */
-  .el-menu--popup-bottom-start{
-    max-height: 50vh;
-    overflow-y: auto;
-  }
-}
-
-.el-drawer__wrapper{ /*抽屉*/
-  z-index: 9999!important;
-}
-
-/*分页手机端显示效果*/
-.el-pagination {
-  overflow-x: auto;
-}
-@media only screen and (max-width:767px){.hidden-xs-only{display:none!important}}@media only screen and (min-width:768px){.hidden-sm-and-up{display:none!important}}@media only screen and (min-width:768px) and (max-width:991px){.hidden-sm-only{display:none!important}}@media only screen and (max-width:991px){.hidden-sm-and-down{display:none!important}}@media only screen and (min-width:992px){.hidden-md-and-up{display:none!important}}@media only screen and (min-width:992px) and (max-width:1199px){.hidden-md-only{display:none!important}}@media only screen and (max-width:1199px){.hidden-md-and-down{display:none!important}}@media only screen and (min-width:1200px){.hidden-lg-and-up{display:none!important}}@media only screen and (min-width:1200px) and (max-width:1919px){.hidden-lg-only{display:none!important}}@media only screen and (max-width:1919px){.hidden-lg-and-down{display:none!important}}@media only screen and (min-width:1920px){.hidden-xl-only{display:none!important}}

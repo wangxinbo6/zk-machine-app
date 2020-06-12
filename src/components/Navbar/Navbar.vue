@@ -10,14 +10,14 @@
             <b-nav-item><router-link to="/home">首页</router-link></b-nav-item>
           </b-navbar-nav>
           <b-navbar-nav>
-            <b-nav-item><router-link to="/order">订单</router-link></b-nav-item>
+            <b-nav-item><router-link to="/order">我的订单</router-link></b-nav-item>
           </b-navbar-nav>
-
           <b-nav-item-dropdown right>
             <!-- Using 'button-content' slot -->
             <template v-slot:button-content>
               <em>User</em>
             </template>
+            <b-dropdown-item href="#">账户设置</b-dropdown-item>
             <b-dropdown-item href="#">登录</b-dropdown-item>
             <b-dropdown-item href="#">退出</b-dropdown-item>
           </b-nav-item-dropdown>

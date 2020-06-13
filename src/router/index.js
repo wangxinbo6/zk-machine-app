@@ -16,7 +16,14 @@ const routes = [
       },
       {
         name:"order",path:'/order',component:()=>import("../views/User/Order.vue")
+      },
+      {
+        name:"machinedetails",path:"/machinedetails",component:()=>import("../views/Machine/MachineDetails.vue")
+      },
+      {
+        name:"machinepaymentsuccess",path:"/machinepaymentsuccess",component:()=>import("../views/Machine/MachinePaymentSuccess.vue")
       }
+      
     ]
   },
   
@@ -39,7 +46,11 @@ const routes = [
     path: "/uploaduserinfo",
     name: "uploaduserinfo",
     component:() => import("../views/UploadUserInfo/UploadUserInfo.vue")
-
+  },
+  {
+    path: "/upmobile",
+    name: "upmobile",
+    component:()=> import("../views/updataMobile/updataMobile.vue")
   }
 ];
 

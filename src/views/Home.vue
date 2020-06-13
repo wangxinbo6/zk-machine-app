@@ -16,10 +16,12 @@
       >
         <!-- Text slides with image -->
         <b-carousel-slide
-          style="max-height:50vh"
           caption="First slide"
+          style="max-height:50vh"
+          
           text="Nulla vitae elit libero, a pharetra augue mollis interdum."
           img-src="https://picsum.photos/1024/480/?image=52"
+          
         ></b-carousel-slide>
 
         <!-- Slides with image only -->

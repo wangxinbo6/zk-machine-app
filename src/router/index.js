@@ -34,6 +34,9 @@ const routes = [
       },
       {
         name:"financedetails",path:"/financedetails",component:()=>import("../views/FinanceUser/FinanceDetails.vue")
+      },
+      {
+        name:"adminorder",path:"/adminorder",component:()=>import("../views/AdminUser/AdminOrder.vue")
       }
     ]
   },

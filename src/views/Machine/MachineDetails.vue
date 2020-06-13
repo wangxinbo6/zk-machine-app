@@ -76,7 +76,8 @@ export default {
     width: 100vw;
     height: 60px;
     line-height: 60px;
-    background: #17a2b8;
+    border-top: 1px solid rgb(243, 240, 240);
+    background: #fff;
     position: fixed;
     bottom: 0;
     &>div{

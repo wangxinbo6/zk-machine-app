@@ -14,6 +14,15 @@
           </b-row>
         </b-container>
       </div>
+      <div class="overflow-auto" style="margin:14px 0;">
+        <b-pagination
+          v-model="currentPage"
+          :total-rows="rows"
+          :per-page="perPage"
+          aria-controls="my-table"
+          align="center"
+        ></b-pagination>
+      </div>
     </div>
 </template>
 
@@ -21,6 +30,9 @@
 export default {
   data(){
     return{
+      perPage: 3,
+      currentPage: 1,
+      rows: 10,
       orderList:[
         {
           url:"https://picsum.photos/1024/400/?image=41",
@@ -41,6 +53,10 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+  .title{
+    padding-top: 20px;
+    font-size: 18px;
+  }
   .bg{
     background-color: #EEF1F8;
     min-height: 100vh;

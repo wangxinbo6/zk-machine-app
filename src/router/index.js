@@ -22,8 +22,19 @@ const routes = [
       },
       {
         name:"machinepaymentsuccess",path:"/machinepaymentsuccess",component:()=>import("../views/Machine/MachinePaymentSuccess.vue")
+      },
+      {
+        name:"commerceget",path:"/commerceget",component:()=>import("../views/CommerceUser/CommerceGet.vue")
+      },
+      {
+        name:"commercedetails",path:"/commercedetails",component:()=>import("../views/CommerceUser/CommerceDetails.vue")
+      },
+      {
+        name:"financeuser",path:"/financeuser",component:()=>import("../views/FinanceUser/FinanceOrder.vue")
+      },
+      {
+        name:"financedetails",path:"/financedetails",component:()=>import("../views/FinanceUser/FinanceDetails.vue")
       }
-      
     ]
   },
   

@@ -36,7 +36,7 @@
     </div>
     <div class="list">
       <b-container >
-        <b-row v-for="(item,index) in orderList" :key="index" style="pading:30px;margin-top:20px;line-height: 80px; border:1px solid #999;background:#fff" class="brow">
+        <b-row v-for="(item,index) in orderList" :key="index" style="pading:30px;margin-top:20px;line-height: 80px; border:1px solid #999;background:#fff;position: relative" class="brow">
           <b-col cols="12" sm="12" xs="12" md="12" lg="12" xl="3" class="imgContent">
             <b-img src="https://picsum.photos/1024/400/?image=41" class="img" fluid alt="Responsive image"></b-img>
           </b-col>
@@ -48,6 +48,7 @@
             <b-col cols="12" sm="12" xs="12" md="12" lg="12" xl="3"><p class="state">状态：{{item.state}}</p></b-col>
             <b-col cols="12" sm="12" xs="12" md="12" lg="6" xl="6"><p>合同编号3：</p>{{item.No}}</b-col>
             <b-col cols="12" sm="12" xs="12" md="12" lg="6" xl="6"><p>提交时间：</p>{{item.time}}</b-col>
+            <a href="#" style="position:absolute;left:0;top:0;width:100%;height:100%"></a>
             </b-row>
           </b-col>
          

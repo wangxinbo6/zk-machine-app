@@ -47,6 +47,16 @@ const routes = [
       {
         name:"adminparameter",path:"/adminparameter",component:()=>import("../views/AdminUser/AdminParameter.vue")
       }
+      ,
+      {
+        name:"adminpersonal",path:"/adminpersonal",component:()=>import("../views/AdminUser/AdminPersonal.vue")
+      },
+      {
+        name:"AuditUserDetail",path:"/AuditUserDetail",component:()=>import("../views/AuditUser/AuditUserDetail.vue")
+      },
+      {
+        name:"AuditUserOrder",path:"/AuditUserOrder",component:()=>import("../views/AuditUser/AuditUserOrder.vue")
+      }
     ]
   },
   

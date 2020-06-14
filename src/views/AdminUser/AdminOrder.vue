@@ -1,7 +1,11 @@
 <template>
   <div>
     <div>
-      <p>设置参数</p>
+      <b-container>
+        <a href="#">
+          <p class="tl" style="font-size:18px; margin: 20px 0">设置参数></p> 
+        </a>
+      </b-container>
     </div>
     <div>
     <b-container>

@@ -27,6 +27,9 @@ const routes = [
         name:"commerceget",path:"/commerceget",component:()=>import("../views/CommerceUser/CommerceGet.vue")
       },
       {
+        name:"commercemyorder",path:"/commercemyorder",component:()=>import("../views/CommerceUser/CommerceMyOrder.vue")
+      },
+      {
         name:"commercedetails",path:"/commercedetails",component:()=>import("../views/CommerceUser/CommerceDetails.vue")
       },
       {
@@ -37,6 +40,9 @@ const routes = [
       },
       {
         name:"adminorder",path:"/adminorder",component:()=>import("../views/AdminUser/AdminOrder.vue")
+      },
+      {
+        name:"admindetail",path:"/admindetail",component:()=>import("../views/AdminUser/AdminDetail.vue")
       }
     ]
   },

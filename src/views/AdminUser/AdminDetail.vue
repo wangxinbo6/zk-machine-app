@@ -1,37 +1,31 @@
 <template>
   <div>
-    <div class="header">
-      <b-container fluid>
-        <b-row>
-          <b-col cols="6" sm="6" xs="6" md="6" lg="6" xl="2" offset-xl="8">
-            <b-button  style="width:100%;margin-top:10px" variant="primary">通过</b-button>
-          </b-col>
-          <b-col cols="6" sm="6" xs="6" md="6" lg="6" xl="2">
-            <b-button  style="width:100%;margin-top:10px">驳回</b-button>
-          </b-col>
-        </b-row>
-      </b-container>
-    </div>
     <div class="list">
-      <b-container fluid style="padding-top:20px;font-size:16px">
+      <b-container  style="padding-top:20px;font-size:16px">
         <b-row>
           <b-col cols="12" sm="12" xs="12" md="12" lg="12" xl="3">
             <b-img :src="machine.url" style="height:100px;width:200px" class="img" fluid alt="Responsive image"></b-img>
           </b-col>
           <b-col cols="12" sm="12" xs="12" md="12" lg="12" xl="3"><p class="name">{{machine.name}}</p></b-col>
           <b-col cols="12" sm="12" xs="6" md="6" lg="6" xl="2"><p class="num">数量：{{machine.num}}</p></b-col>
-          <b-col cols="12" sm="12" xs="6" md="6" lg="6" xl="2"><p class="sum">总价：￥{{machine.sum}}</p></b-col>
-          <b-col cols="12" sm="12" xs="12" md="12" lg="12" xl="12" >订单号：{{machine.No}}</b-col>
+          <b-col cols="12" sm="12" xs="6" md="6" lg="6" xl="4"><p class="sum tr">总价：￥{{machine.sum}}</p></b-col>
+          <b-col cols="12" sm="12" xs="12" md="12" lg="12" xl="12" class="tr" >订单号：{{machine.No}}</b-col>
+          <b-col cols="12" sm="12" xs="12" md="12" lg="12" xl="12" class="tr" >商务人员：{{machine.businessName}}</b-col>
+          <b-col cols="12" sm="12" xs="12" md="12" lg="12" xl="12" class="tr" >客户信息：{{machine.userName}}</b-col>
         </b-row>
       </b-container>
     </div>
+    <b-container>
     <div class="screenshotTitle">
+      
       <p class="fl">付款截图</p>
       <p class="clear"></p>
+      
     </div>
+    </b-container>
     <div>
       <div class="screenshotImgs">
-        <b-container fluid>
+        <b-container >
           <b-row>
             <b-col  v-for="(item,index) in imgs" :key="index" cols="6" sm="6" xs="6" md="4" lg="4" xl="3">
               <b-img :src="machine.url" style="margin-top:10px" class="img" fluid alt="Responsive image"></b-img>
@@ -40,13 +34,15 @@
         </b-container>
       </div>
     </div>
+    <b-container>
     <div class="contractTitle">
       <p class="fl">合同照片</p>
       <p class="clear"></p>
     </div>
+    </b-container>
     <div>
       <div class="contractImgs">
-        <b-container fluid>
+        <b-container >
           <b-row>
             <b-col  v-for="(item,index) in imgs2" :key="index" cols="6" sm="6" xs="6" md="4" lg="4" xl="3">
               <b-img  :src="machine.url" style="margin-top:10px" class="img" fluid alt="Responsive image"></b-img>
@@ -66,7 +62,9 @@ export default {
         name:"xxxxxxxx机器",
         num:22,
         sum:222222,
-        No:"xxxxxxxxxxx2123123123123"
+        No:"xxxxxxxxxxx2123123123123",
+        businessName:"xxx",
+        userName:"李哈哈"
       },
       imgs:["https://picsum.photos/1024/400/?image=41","https://picsum.photos/1024/400/?image=41","https://picsum.photos/1024/400/?image=41","https://picsum.photos/1024/400/?image=41"],
       imgs2:["https://picsum.photos/1024/400/?image=41","https://picsum.photos/1024/400/?image=41","https://picsum.photos/1024/400/?image=41","https://picsum.photos/1024/400/?image=41"],

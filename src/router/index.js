@@ -52,6 +52,9 @@ const routes = [
         name:"adminpersonal",path:"/adminpersonal",component:()=>import("../views/AdminUser/AdminPersonal.vue")
       },
       {
+        name:"adminenterprise",path:"/adminenterprise",component:()=>import("../views/AdminUser/AdminEnterprise.vue")
+      },
+      {
         name:"AuditUserDetail",path:"/AuditUserDetail",component:()=>import("../views/AuditUser/AuditUserDetail.vue")
       },
       {

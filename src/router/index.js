@@ -43,6 +43,9 @@ const routes = [
       },
       {
         name:"admindetail",path:"/admindetail",component:()=>import("../views/AdminUser/AdminDetail.vue")
+      },
+      {
+        name:"adminparameter",path:"/adminparameter",component:()=>import("../views/AdminUser/AdminParameter.vue")
       }
     ]
   },

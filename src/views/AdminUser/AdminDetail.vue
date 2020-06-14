@@ -10,8 +10,8 @@
           <b-col cols="12" sm="12" xs="6" md="6" lg="6" xl="2"><p class="num">数量：{{machine.num}}</p></b-col>
           <b-col cols="12" sm="12" xs="6" md="6" lg="6" xl="4"><p class="sum tr">总价：￥{{machine.sum}}</p></b-col>
           <b-col cols="12" sm="12" xs="12" md="12" lg="12" xl="12" class="tr" >订单号：{{machine.No}}</b-col>
-          <b-col cols="12" sm="12" xs="12" md="12" lg="12" xl="12" class="tr" >商务人员：{{machine.businessName}}</b-col>
-          <b-col cols="12" sm="12" xs="12" md="12" lg="12" xl="12" class="tr" >客户信息：{{machine.userName}}</b-col>
+          <b-col cols="12" sm="12" xs="12" md="12" lg="12" xl="12" class="tr mt-2" >商务人员：{{machine.businessName}}</b-col>
+          <b-col cols="12" sm="12" xs="12" md="12" lg="12" xl="12" class="tr mt-2" >  客户信息：{{machine.userName}} <a href="#">点击查看</a></b-col>
         </b-row>
       </b-container>
     </div>

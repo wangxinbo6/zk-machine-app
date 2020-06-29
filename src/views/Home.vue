@@ -1,8 +1,48 @@
 <template>
   <div class="home">
     
-    <div style="width:94% ;margin:0 auto" class="homeContent">
-      <b-container style="padding-top:30px">
+    <div style="width:94% ;margin:0 auto;position:relative;" class="homeContent">
+      <!--确认申请-->
+      <b-container>
+        <div @click="addShow=!addShow" style="
+          position: absolute;
+          top: 0px;
+          right: 15px;
+          z-index:5;
+          padding: 0 10px 4px;
+          background: #17a2b8;
+          color: #fff;
+          border-bottom-right-radius: 10px;
+          border-bottom-left-radius: 10px;
+          cursor: pointer;">商务申请
+          <b-icon icon="chevron-double-down" aria-hidden="true" v-show="!addShow"></b-icon>
+          <b-icon icon="chevron-double-up" aria-hidden="true" v-show="addShow"></b-icon>
+        </div>
+        <transition name="slide-fade">
+          <b-row>
+            <b-col sm="12" md="12" lg="3" xl="3">
+              <div  class="pt-4 mb-3 addContent " v-if="addShow">
+                <b-input-group size="sm" prepend="姓  名" class="mb-1">
+                  <b-input v-model="add.name"></b-input>
+                </b-input-group>
+                <b-input-group size="sm" prepend="电  话" class="mb-1">
+                  <b-input v-model="add.mobile"></b-input>
+                </b-input-group>
+                <b-input-group size="sm" prepend="密  码" class="mb-1">
+                  <b-input v-model="add.password"></b-input>
+                </b-input-group>
+                <b-button size="sm" class="fr" variant="info" style="width:100px" @click="addSubmit">确认申请</b-button>
+                <p class="clear"></p>
+              </div>
+            </b-col>
+          </b-row>
+          
+        </transition>
+      </b-container>
+
+      <b-container style="padding-top:30px;">
+        
+
         <div class="title">
           <p></p>
           <p>家庭药箱</p>
@@ -56,8 +96,14 @@ export default {
   name: "Home",
   data(){
     return{
+      addShow:false,
       slide: 0,
       sliding: null,
+      add:{
+        name:'11',
+        password:'123',
+        mobile:'333',
+      },
       shopList:[
         {url:"https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2574012528,4184940&fm=26&gp=0.jpg",title:"西瓜机西瓜机西瓜机西瓜机西瓜机西瓜机西瓜机西瓜机西瓜机西瓜机西瓜机西瓜机西瓜机西瓜机西瓜机西瓜机西瓜机西瓜机西瓜机西瓜机西瓜机西瓜机西瓜机西瓜机",num:"999",money:8700},
         {url:"https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2574012528,4184940&fm=26&gp=0.jpg",title:"葡萄机",num:"10",money:96},
@@ -77,12 +123,17 @@ export default {
     }
   },
   methods: {
+    
     onSlideStart(slide) {
       this.sliding = true
     },
     onSlideEnd(slide) {
       this.sliding = false
+    },
+    addSubmit(){
+
     }
+
   },
   components: {
     Navbar
